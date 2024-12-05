@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8debf;
+    margin: 0;
+    padding: 1rem;
+    font-family: "Muli", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    margin: 0;
+    padding: 5px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px white;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #e37f27;
+    padding: 1.5rem;
+}
+  
+canvas {
+    background-color: #fff;
+    border: 2px solid #e37f27;
+    border-radius: 50px;
+}
+
+.c2 {
+    display: none;
+}
+
+.toolbox {
+    background-color: #e37f27;
+    display: flex;
+    width: 804px;
+    padding: 1rem 0 0;
+}
+
+.toolbox > * {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    margin: .25rem;
+    padding: .25rem;
+    cursor: pointer;
+    box-shadow: 0 1px 2px black;
+    transition: all 0.3s ease;
+}
+
+.toolbox > *:nth-child(2){
+    font-size: 1.5rem;
+}
+
+.toolbox > *:last-child {
+    font-family: inherit;
+    margin-left: auto;
+    font-size: 1.1rem;
+    width: auto;
+    height: auto;
+    padding: .8rem;
+}
+
+button:hover {
+    background-color: #dfdede;
+    transform: scale(1.05);
+}
+
+@media (max-width: 450px) {
+    body {
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    canvas {
+        width: 380px;
+        height: 550px;
+    }
+
+    .toolbox {
+        width: 380px;
+    }
+
+    .toolbox > * {
+        font-size: 1.5rem;
+        height: 40px;
+        width: 45px;
+        margin: .25rem;
+        padding: .25rem;
+    }
+
+    .toolbox > *:nth-child(2){
+        font-size: 1.5rem;
+        margin: auto 10px;
+    }
+
+    .toolbox > *:last-child {
+        font-family: inherit;
+        margin-left: auto;
+        font-size: 1rem;
+        width: auto;
+        height: 25px;
+        padding: .8rem;
+    }
+}
